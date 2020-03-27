@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% block body_block %}
+{% load static %}
+<!-- slider Area Start-->
+  <div class="slider-area ">
+      <!-- Mobile Menu -->
+      <div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/category.jpg' %}">
+          <div class="container">
+              <div class="row">
+                  <div class="col-xl-12">
+                      <div class="hero-cap text-center">
+                          <h2>product list</h2>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- slider Area End-->
+  <!-- product list part start-->
+    <section class="product_list section_padding">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-8">
+                    <div class="product_list">
+                        <div class="row">
+                            {% for product in products %}
+                              <div class="col-lg-6 col-sm-6">
+                                <div class="single_product_item">
+                                  <img src="{{ product.image.url }}" alt="" class="img-fluid">
+                                  <h3> <a href="single-product.html">{{ product.name }}</a> </h3>
+                                    <p>{{ product.description }}</p>
+                                    <a href="#" class="btn btn-primary">Details</a>
+                                  </div>
+                              </div>
+                             {% endfor %}
+                        </div>
+                     </div>
+                </div>
+              </div>
+         </div>
+      </section>
+
+<!-- <div class="container">
+  {% for new_product in products %}
+  <p></p>
+  <div class="card" style="width: 70rem;">
+  <img src="{{ new_product.image.url }}"class="card-img-top" alt="...">
+  <div class="card-body">
+    <h3 class="card-title">{{ new_product.name }}</h3>
+    <p class="card-text">{{ new_product.description }}</p>
+    <a href="#" class="btn btn-primary">Details</a>
+  </div>
+</div>
+{% endfor %}
+</div> -->
+
+{% endblock %}

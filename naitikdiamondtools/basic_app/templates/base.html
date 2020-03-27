@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Untitled</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Button.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- NAVBAR CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/css/-Fixed-Navbar-start-with-transparency-background-BS4-.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+      <!-- CSS FROM TEMPLATE -->
+      <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/flaticon.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/slicknav.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/animate.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/magnific-popup.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/fontawesome-all.min.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/themify-icons.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/slick.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+</head>
+
+<body>
+  <!-- <style>.navbar.navbar-light.navbar-expand-md.navigation-clean {
+  background-color: #164192;
+  color: white;
+}</style> -->
+<!-- Preloader Start -->
+<div id="preloader-active">
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="preloader-inner position-relative">
+            <div class="preloader-circle"></div>
+            <div class="preloader-img pere-text">
+                <img src="assets/img/logo/logo.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Preloader Start -->
+
+<header>
+    <!-- Header Start -->
+   <div class="header-area">
+        <div class="main-header ">
+
+           <div class="header-bottom  header-sticky">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <!-- Logo -->
+                        <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
+                            <div class="logo">
+                              <a href="index.html"><img src="assets/img/logo/logo.png" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-8 col-md-7 col-sm-5">
+                            <!-- Main-menu -->
+                            <div class="main-menu f-right d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index.html">Home</a></li>
+                                        <li class=""><a href="#">Our Products</a>
+                                            <ul class="submenu">
+                                                <li><a href="product_list.html"> Product list</a></li>
+                                                <li><a href="single-product.html"> Product Details</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="contact.html">Contact</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-3 col-md-3 col-sm-3 fix-card">
+                            <ul class="header-right f-right d-none d-lg-block d-flex justify-content-between">
+\
+                            </ul>
+                        </div>
+                        <!-- Mobile Menu -->
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+   </div>
+    <!-- Header End -->
+</header>
+<!-- <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white transparency border-bottom border-light" id="transmenu">
+    <div class="container"><a class="navbar-brand text-success" href="#header" style="font-family: 'Roboto';">NAITIK DIAMOND TOOLS</a>
+      <button data-toggle="collapse" class="navbar-toggler collapsed" data-target="#navcol-1"></button>
+
+        <div
+            class="collapse navbar-collapse" id="navcol-1">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="dropdown nav-item"><a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Products </a>
+                  <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Multi-Blade Segment</a>
+                    <a class="dropdown-item" role="presentation" href="#">Wiresaw Chain</a>
+              </li>
+                <li class="nav-item" role="presentation"><a class="nav-link" style="font-family: 'Roboto';" href="#">About Us</a></li>
+                <li class="nav-item" role="presentation"><a class="nav-link" style="font-family: 'Roboto';" href="#">Contact Us</a></li>
+            </ul>
+    </div>
+</div>
+</nav> -->
+
+    <div class="container">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bs-animation.js"></script>
+
+    <!-- NAVBAR JAVASCRIPT -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/-Fixed-Navbar-start-with-transparency-background-BS4-.js"></script>
+
+        <!-- JS here -->
+
+      		<!-- All JS Custom Plugins Link Here here -->
+              <script src="{% static 'assets/js/vendor/modernizr-3.5.0.min.js' %}"></script>
+      		<!-- Jquery, Popper, Bootstrap -->
+      		<script src="{% static 'assets/js/vendor/jquery-1.12.4.min.js' %}"></script>
+              <script src="{% static 'assets/js/popper.min.js' %}"></script>
+              <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+      	    <!-- Jquery Mobile Menu -->
+              <script src="{% static 'assets/js/jquery.slicknav.min.js' %}"></script>
+
+      		<!-- Jquery Slick , Owl-Carousel Plugins -->
+              <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+              <script src="{% static 'assets/js/slick.min.js' %}"></script>
+
+      		<!-- One Page, Animated-HeadLin -->
+              <script src="{% static 'assets/js/wow.min.js' %}"></script>
+      		<script src="{% static 'assets/js/animated.headline.js' %}"></script>
+              <script src="{% static 'assets/js/jquery.magnific-popup.js' %}"></script>
+
+      		<!-- Scrollup, nice-select, sticky -->
+              <script src="{% static 'assets/js/jquery.scrollUp.min.js' %}"></script>
+              <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
+      		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+
+              <!-- contact js -->
+              <script src="{% static 'assets/js/contact.js' %}"></script>
+              <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+              <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+              <script src="{% static 'assets/js/mail-script.js' %}"></script>
+              <script src="{% static 'assets/js/jquery.ajaxchimp.min.js' %}"></script>
+
+      		<!-- Jquery Plugins, main Jquery -->
+              <script src="{% static 'assets/js/plugins.js' %}"></script>
+              <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
