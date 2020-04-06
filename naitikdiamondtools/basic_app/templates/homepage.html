@@ -5,7 +5,7 @@
       <div class="slider-area ">
           <!-- Mobile Menu -->
           <div class="slider-active">
-              <div class="single-slider slider-height" data-background="assets/img/hero/h1_hero.jpg">
+              <div class="single-slider slider-height" data-background="{% static 'assets/img/hero/h1_hero.jpg' %}">
                   <div class="container">
                       <div class="row d-flex align-items-center justify-content-between">
                           <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 d-none d-md-block">
@@ -15,9 +15,9 @@
                           </div>
                           <div class="col-xl-5 col-lg-5 col-md-5 col-sm-8">
                               <div class="hero__caption">
-                                  <span data-animation="fadeInRight" data-delay=".4s">60% Discount</span>
-                                  <h1 data-animation="fadeInRight" data-delay=".6s">Winter <br> Collection</h1>
-                                  <p data-animation="fadeInRight" data-delay=".8s">Best Cloth Collection By 2020!</p>
+                                  <!-- <span data-animation="fadeInRight" data-delay=".4s">Leading tool manufacturer</span> -->
+                                  <h1 data-animation="fadeInRight" data-delay=".6s">Here to <br>serve you!</h1>
+                                  <p data-animation="fadeInRight" data-delay=".8s">Leading Cutting Tool Manufacturer</p>
                                   <!-- Hero-btn -->
                                   <div class="hero__btn" data-animation="fadeInRight" data-delay="1s">
                                       <a href="industries.html" class="btn hero-btn">Shop Now</a>
@@ -52,5 +52,32 @@
           </div>
       </div>
       <!-- slider Area End-->
+      <div class="container-fluid">
+          <!-- Section Tittle -->
+          <div class="row">
+              <div class="col-lg-12">
+                  <div class="section-tittle text-center mb-85">
+                      <h2>Shop by Category</h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+            {% for product in products %}
+              <div class="col-xl-4 col-lg-6">
+                  <div class="single-category mb-30">
+                      <div class="category-img">
+                          <!-- <img src="{{ product.image.url }}" alt=""> -->
+                          <div class="category-caption">
+                              <h2>{{ product.name }}</h2>
+                              <span class="best"><a href="{{ product.id }}">Best New Deals</a></span>
+                              <span class="collection">New Collection</span>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              {% endfor %}
+
+          </div>
+      </div>
 
 {% endblock %}

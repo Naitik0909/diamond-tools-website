@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.urls import reverse_lazy
-from django.views.generic import TemplateView, ListView, DetailView
+from django.views.generic import TemplateView, ListView, DetailView, View
 from . import models
 # Create your views here.
-class Base_class(TemplateView):
-    template_name = 'homepage.html'
+class Base_class(View):
+    def get(self, request, *args, **kwargs):
+        products = models.Product.objects.all()
+        context = {'products': products}
+        return render(request, "homepage.html", context=context)
 
 class ProductList(ListView):
     template_name = 'products_list.html'
