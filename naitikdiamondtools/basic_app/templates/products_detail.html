@@ -2,17 +2,16 @@
 {% block body_block %}
 {% load static %}
 <!-- Mobile Menu -->
-<div class="single-slider slider-height2 d-flex align-items-center" data-background="assets/img/hero/category.jpg">
+<div class="single-slider slider-height2 d-flex align-items-center" data-background="{% static 'assets/img/hero/category.jpg' %}">
     <div class="container">
         <div class="row">
             <div class="col-xl-12">
                 <div class="hero-cap text-center">
-                    <h2>product Details</h2>
+                    <h2>{{ product_detail.name }}</h2>
                 </div>
             </div>
         </div>
     </div>
-</div>
 </div>
 <!-- slider Area End-->
 
@@ -70,7 +69,7 @@
               <p>Seamlessly empower fully researched growth strategies and interoperable internal or “organic” sources credibly innovate granular internal .</p>
               <div class="subscribe_form">
                   <input type="email" placeholder="Enter your mail">
-                  <a href="#" class="btn_1">Subscribe</a>
+                  <a href="#" class="btn hero=btn">Subscribe</a>
               </div>
           </div>
       </div>

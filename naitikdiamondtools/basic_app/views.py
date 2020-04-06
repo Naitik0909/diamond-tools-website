@@ -17,4 +17,4 @@ class ProductList(ListView):
 class ProductDetail(DetailView):
     model = models.Product
     template_name = 'products_detail.html'
-    context_object_name = 'products_detail'
+    context_object_name = 'product_detail'
