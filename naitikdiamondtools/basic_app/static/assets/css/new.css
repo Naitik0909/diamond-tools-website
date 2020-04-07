@@ -1,0 +1,11 @@
+
+#nav-logo{
+  font-size: 30px;
+}
+
+
+
+@media (max-width: 776px) {
+  #nav-logo {
+    font-size: 20px;
+     } }
