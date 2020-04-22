@@ -28,6 +28,7 @@
       <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}">
       <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
       <link rel="stylesheet" href="{% static 'assets/css/new.css' %}">
+      <link rel="stylesheet" href="{% static 'assets/css/homepage.css' %}">
 </head>
 
 <body>
@@ -104,10 +105,8 @@
     <!-- Header End -->
 </header>
 
-    <div class="container">
       {% block body_block %}
       {% endblock %}
-    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/bs-animation.js"></script>
@@ -141,7 +140,7 @@
       		<!-- Scrollup, nice-select, sticky -->
               <script src="{% static 'assets/js/jquery.scrollUp.min.js' %}"></script>
               <script src="{% static 'assets/js/jquery.nice-select.min.js' %}"></script>
-      		<script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+      		    <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
 
               <!-- contact js -->
               <script src="{% static 'assets/js/contact.js' %}"></script>
@@ -153,6 +152,7 @@
       		<!-- Jquery Plugins, main Jquery -->
               <script src="{% static 'assets/js/plugins.js' %}"></script>
               <script src="{% static 'assets/js/main.js' %}"></script>
+              <script src="{% static 'assets/js/new.js' %}"></script>
               <!-- Footer bottom -->
                             <div class=" container row">
                              <div class="col-xl-7 col-lg-7 col-md-7">
@@ -186,7 +186,8 @@
                       <p>Seamlessly empower fully researched growth strategies and
                         interoperable internal or “organic” sources credibly innovate granular internal .</p>
                         <form class="" method="post">
-
+                        <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
+                        <input type="text" name="" placeholder="Enter your Email Id or Phone number" value="">
                         <div class="subscribe_form">
                           <textarea style="border-radius:20px;width:80%;" name="name" placeholder="Enter your query here
                           "rows="8" cols="80"></textarea>
