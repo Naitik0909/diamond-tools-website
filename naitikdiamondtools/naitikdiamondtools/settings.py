@@ -25,9 +25,9 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 SECRET_KEY = 'ta(&zkvto36ozteq57#2ht968su0cu#_p7+s^=*!vus4amg0^a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['ec2-13-233-190-170.ap-south-1.compute.amazonaws.com']
 
 
 # Application definition
