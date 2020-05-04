@@ -1,33 +1,5 @@
-/* Theme Description
--------------------------------------------------
 
-	  Theme Name:
-	  Author:
-	  Support:
-	  Description:
-	  Version:
-
--------------------------------------------------
-*/
-/* CSS Index
--------------------------------------------------
-
-	1. Theme default css
-	2. header
-	3. slider
-	4. about-area
-	5. features-box
-	6. department
-	7. team
-	8. video-area
-	9. counter
-	10. footer
-
--------------------------------------------------
-*/
-/*-------------   Color variabel  --------------*/
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,500,600,700,800|Poppins:400,500,600,700|Yellowtail&display=swap");
-/* line 37, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_color.scss */
 .white-bg {
   background: #ffffff;
 }

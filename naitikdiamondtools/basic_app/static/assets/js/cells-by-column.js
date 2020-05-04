@@ -1,11 +1,3 @@
-/*!
- * cellsByColumn layout mode for Isotope
- * v1.1.4
- * https://isotope.metafizzy.co/layout-modes/cellsbycolumn.html
- */
-
-/*jshint browser: true, devel: false, strict: true, undef: true, unused: true */
-
 ( function( window, factory ) {
   // universal module definition
   /* jshint strict: false */ /*globals define, module, require */

@@ -1,14 +1,3 @@
-// Ion.RangeSlider
-// version 2.1.7 Build: 371
-// Â© Denis Ineshin, 2017
-// https://github.com/IonDen
-//
-// Project page:    http://ionden.com/a/plugins/ion.rangeSlider/en.html
-// GitHub page:     https://github.com/IonDen/ion.rangeSlider
-//
-// Released under MIT licence:
-// http://ionden.com/a/plugins/licence-en.html
-// =====================================================================================================================
 
 ;(function(factory) {
     if (typeof define === "function" && define.amd) {
@@ -753,7 +742,7 @@
             if ($.contains(this.$cache.cont[0], e.target) || this.dragging) {
                 this.callOnFinish();
             }
-            
+
             this.dragging = false;
         },
 
@@ -2372,7 +2361,7 @@
 // Trigger
 
 $(function () {
-  
+
 var $range = $(".js-range-slider"),
     $inputFrom = $(".js-input-from"),
     $inputTo = $(".js-input-to"),
@@ -2396,7 +2385,7 @@ $range.ionRangeSlider({
     prettify_separator: ".",
   values_separator: " - ",
   force_edges: true
-  
+
 
 });
 
@@ -2405,21 +2394,21 @@ instance = $range.data("ionRangeSlider");
 function updateInputs (data) {
     from = data.from;
     to = data.to;
-    
+
     $inputFrom.prop("value", from);
-    $inputTo.prop("value", to); 
+    $inputTo.prop("value", to);
 }
 
 $inputFrom.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < min) {
         val = min;
     } else if (val > to) {
         val = to;
     }
-    
+
     instance.update({
         from: val
     });
@@ -2427,14 +2416,14 @@ $inputFrom.on("input", function () {
 
 $inputTo.on("input", function () {
     var val = $(this).prop("value");
-    
+
     // validate
     if (val < from) {
         val = from;
     } else if (val > max) {
         val = max;
     }
-    
+
     instance.update({
         to: val
     });

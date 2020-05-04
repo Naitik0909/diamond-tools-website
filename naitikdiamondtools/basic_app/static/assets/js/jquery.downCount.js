@@ -1,7 +1,3 @@
-/**
- * downCount: Simple Countdown clock with offset
- * Author: Sonny T. <hi@sonnyt.com>, sonnyt.com
- */
 
 (function ($) {
 
@@ -96,7 +92,7 @@
             container.find('.minutes_ref').text(ref_minutes);
             container.find('.seconds_ref').text(ref_seconds);
         };
-        
+
         // start
         var interval = setInterval(countdown, 1000);
     };

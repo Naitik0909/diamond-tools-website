@@ -1,14 +1,4 @@
-/*!
- * jQuery Form Plugin
- * version: 3.32.0-2013.04.09
- * @requires jQuery v1.5 or later
- * Copyright (c) 2013 M. Alsup
- * Examples and documentation at: http://malsup.com/jquery/form/
- * Project repository: https://github.com/malsup/form
- * Dual licensed under the MIT and GPL licenses.
- * https://github.com/malsup/form#copyright-and-license
- */
-/*global ActiveXObject */
+
 ;(function($) {
 "use strict";
 
@@ -59,7 +49,7 @@ feature.formdata = window.FormData !== undefined;
 var hasProp = !!$.fn.prop;
 
 // attr2 uses prop when it can but checks the return type for
-// an expected string.  this accounts for the case where a form 
+// an expected string.  this accounts for the case where a form
 // contains inputs with names like "action" or "method"; in those
 // cases "prop" returns the element
 $.fn.attr2 = function() {
@@ -405,7 +395,7 @@ $.fn.ajaxSubmit = function(options) {
 
         var CLIENT_TIMEOUT_ABORT = 1;
         var SERVER_ABORT = 2;
-                
+
         function getDoc(frame) {
             /* it looks like contentWindow or contentDocument do not
              * carry the protocol property in ie8, when running under ssl
@@ -413,9 +403,9 @@ $.fn.ajaxSubmit = function(options) {
              * the protocol is know but not on the other two objects. strange?
              * "Same origin policy" http://en.wikipedia.org/wiki/Same_origin_policy
              */
-            
+
             var doc = null;
-            
+
             // IE8 cascading access check
             try {
                 if (frame.contentWindow) {
@@ -555,7 +545,7 @@ $.fn.ajaxSubmit = function(options) {
             if (xhr.aborted || callbackProcessed) {
                 return;
             }
-            
+
             doc = getDoc(io);
             if(!doc) {
                 log('cannot access response document');
