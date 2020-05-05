@@ -17,7 +17,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
@@ -25,7 +24,7 @@ STATIC_DIR = os.path.join(BASE_DIR, "static")
 SECRET_KEY = 'ta(&zkvto36ozteq57#2ht968su0cu#_p7+s^=*!vus4amg0^a'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['ec2-13-234-30-132.ap-south-1.compute.amazonaws.com', '127.0.0.1']
 

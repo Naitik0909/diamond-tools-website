@@ -164,7 +164,7 @@
            <p>If you are interested in any of our products or just feel like
              asking any query to us, feel free to contact us.</p>
 
-             <form name="query-form" class="" method="POST">
+             <form id="new-form" name="query-form" class="" method="POST">
                {% csrf_token %}
              <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
              <input type="text" name="email-phone" placeholder="Enter your Email Id or Phone number" value="">
@@ -172,7 +172,7 @@
                <textarea style="border-radius:20px;width:80%;" name="actual-query" placeholder="Enter your query here
                "rows="8" cols="80"></textarea>
                <br><br>
-               <input type="submit" class="btn" value="Submit your Query"><br><br>
+               <a type="submit" class="btn" onclick="validateForm()">Submit your Query</a><br><br>
              </div>
 
            </form>
