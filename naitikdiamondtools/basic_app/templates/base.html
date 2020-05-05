@@ -153,6 +153,7 @@
               <script src="{% static 'assets/js/plugins.js' %}"></script>
               <script src="{% static 'assets/js/main.js' %}"></script>
               <script src="{% static 'assets/js/new.js' %}"></script>
+              <script src="{% static 'assets/js/form-validation.js' %}"></script>
               <!-- subscribe part here -->
  <section class="subscribe_part" style="padding-top: 150px;">
    <div class="container">
@@ -162,14 +163,16 @@
            <h2>Do we have a deal?</h2>
            <p>If you are interested in any of our products or just feel like
              asking any query to us, feel free to contact us.</p>
-             <form class="" method="post">
+
+             <form name="query-form" class="" method="POST">
+               {% csrf_token %}
              <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
-             <input type="text" name="" placeholder="Enter your Email Id or Phone number" value="">
+             <input type="text" name="email-phone" placeholder="Enter your Email Id or Phone number" value="">
              <div class="subscribe_form">
-               <textarea style="border-radius:20px;width:80%;" name="name" placeholder="Enter your query here
+               <textarea style="border-radius:20px;width:80%;" name="actual-query" placeholder="Enter your query here
                "rows="8" cols="80"></textarea>
                <br><br>
-               <a href="#" class="btn hero=btn">Submit your query</a><br><br>
+               <input type="submit" class="btn" value="Submit your Query"><br><br>
              </div>
 
            </form>

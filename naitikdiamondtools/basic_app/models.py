@@ -10,3 +10,8 @@ class Product(models.Model):
     coverimg3 = models.ImageField(upload_to='images/cover/3', blank=True)
     def __str__(self):
         return self.name
+
+class QueryBox(models.Model):
+    email = models.EmailField(blank=True, null=True)
+    phone = models.PositiveIntegerField(blank=True, null=True)
+    query = models.CharField(max_length=20000)
