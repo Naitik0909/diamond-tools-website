@@ -167,10 +167,10 @@
              <form id="new-form" name="query-form" class="" method="POST">
                {% csrf_token %}
              <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
-             <input type="text" name="email-phone" placeholder="Enter your Email Id or Phone number" value="">
+             <input class="form-control valid" name="email-phone" id="email" type="email" onfocus="this.placeholder = ''"
+             onblur="this.placeholder = 'Enter email address or Phone number'" placeholder="Enter email address or Phone number">
              <div class="subscribe_form">
-               <textarea style="border-radius:20px;width:80%;" name="actual-query" placeholder="Enter your query here
-               "rows="8" cols="80"></textarea>
+               <textarea class="form-control w-100" name="actual-query" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message/Query'" placeholder=" Enter Message/Query"></textarea>
                <br><br>
                <a type="submit" class="btn" onclick="validateForm()">Submit your Query</a><br><br>
              </div>

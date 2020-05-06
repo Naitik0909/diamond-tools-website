@@ -34,6 +34,10 @@ class BaseClass(View):
         formSubmitted(self, request, *args, **kwargs)
         return redirect("index") # also return a message that message has been sent
 
+class AboutUs(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, 'aboutus.html')
+
 class ProductDetail(View):
     def get(self, request, *args, **kwargs):
         path = self.request.path

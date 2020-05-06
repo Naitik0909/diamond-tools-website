@@ -1,5 +1,7 @@
 
-
+.mobile-map{
+  display: none;
+}
 #nav-logo{
   font-size: 30px;
   margin-left: 50px;
@@ -18,4 +20,16 @@
 
 .img-fluid{
   border: solid black 1px;
+}
+
+@media (max-width: 776px) {
+  .pc-map {
+    display: none;
+     }
+}
+
+@media (max-width: 776px) {
+  .mobile-map{
+    display: contents;
+  }
 }
