@@ -3450,7 +3450,7 @@ input:focus {
 @media (max-width: 767px) {
   /* line 21, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_headerMenu.scss */
   .header-area .header-bottom {
-    padding: 22px 25px;
+    padding: 15px 15px;
   }
 }
 

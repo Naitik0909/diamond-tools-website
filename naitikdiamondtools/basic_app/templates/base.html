@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>Naitik Diamond Tools</title>
-    <link rel="shortcut icon" href="{% static 'logo-sqr.png' %}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{% static 'Untitled-5-trans.png' %}" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="{% static 'css/homepage.css' %}">
@@ -42,7 +42,7 @@
         <div class="preloader-inner position-relative">
             <div class="preloader-circle"></div>
             <div class="preloader-img pere-text">
-                <img src="{% static 'ndt-logo-new.png' %}"alt="">
+                <img src="{% static 'Untitled-5-trans-solo.png' %}"alt="">
             </div>
         </div>
     </div>
@@ -60,7 +60,8 @@
                         <!-- Logo -->
                         <div class="col-xl-1 col-lg-1 col-md-1 col-sm-3">
                             <div class="logo">
-                              <a href="index.html"><img src="{% static 'ndt-logo-new.png' %}" style="width:150px"alt=""></a>
+                              <a href="{% url 'index' %}"><img id="logo-main-img"
+                                src="{% static 'Untitled-5-trans-solo.png' %}" style="width:150px"alt=""></a>
                             </div>
 
                         </div>
@@ -83,7 +84,7 @@
                                             </ul>
                                         </li>
 
-                                        <li><a style="font-size:20px;" href="contact.html">Contact</a></li>
+                                        <li><a style="font-size:20px;" href="{% url 'contact-us' %}">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
