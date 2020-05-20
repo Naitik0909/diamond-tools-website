@@ -2,6 +2,4 @@ stages:
   - deploy
 deploy:
   stage: deploy
-  script:
-    - cd diamond-tools-website/
-    - git pull origin master
+  script: ddeploy.sh
