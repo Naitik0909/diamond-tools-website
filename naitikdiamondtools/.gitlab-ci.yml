@@ -2,4 +2,4 @@ stages:
   - deploy
 deploy:
   stage: deploy
-  script: ddeploy.sh
+  script: deploy.sh
