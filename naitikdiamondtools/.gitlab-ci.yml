@@ -1,9 +1,7 @@
 stages:
   - deploy
-
-stage: deploy
+deploy:
+  stage: deploy
   script:
-  ...
-  ???
-  only:
-  - develop
+    - cd diamond-tools-website/
+    - git pull origin master
