@@ -1,7 +1,5 @@
-stages:
-  - deploy
-deploy:
-  stage: deploy
+pdeploy:
   script:
-    - cd diamond-tools-website/
+    - cd diamond-tools-website
     - git pull origin master
+    - sudo systemctl restart nginx
