@@ -6,6 +6,12 @@
   font-size: 30px;
   margin-left: 50px;
 }
+
+#logo-main-img{
+  width: 150px;
+}
+
+
 @media (max-width: 776px) {
   #nav-logo {
     display: none;
