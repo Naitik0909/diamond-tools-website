@@ -40,7 +40,7 @@ class AboutUs(View):
 
 class ProductDetail(View):
     def get(self, request, *args, **kwargs):
-        path = self.request.path
+        path = self.request.path   # 127.0.0.1:8000/<path>
         products_list = ["/1/", "/2/", "/3/", "/4/", "/5/"]
         for i in range(0, 5):
             if (path == products_list[i]):
