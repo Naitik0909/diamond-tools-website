@@ -5,3 +5,11 @@
 .my-table{
   margin-top: 40px;
 }
+
+.progress-table{
+  font-weight: 700;
+}
+
+.progress-table-wrap{
+  overflow-x: hidden;
+}
