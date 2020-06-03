@@ -7426,7 +7426,7 @@ del {
 .progress-table .table-head .country,
 .progress-table .table-head .visit,
 .progress-table .table-head .percentage {
-  color: #415094;
+  color: #F58F84;
   line-height: 40px;
   text-transform: uppercase;
   font-weight: 500;
@@ -7435,7 +7435,7 @@ del {
 /* line 355, ../../SAIFUL/Running_project/250 eCommerce_HTML/250 eCommerce_HTML/250 eCommerce_HTML/assets/scss/_elements.scss */
 .progress-table .table-row {
   padding: 15px 0;
-  border-top: 1px solid #edf3fd;
+  border-top: 3px dashed #763568;
   display: flex;
 }
 

@@ -42,11 +42,29 @@ class ProductDetail(View):
     def get(self, request, *args, **kwargs):
         path = self.request.path   # 127.0.0.1:8000/<path>
         products_list = ["/1/", "/2/", "/3/", "/4/", "/5/"]
+
+        # For single blade's table
+        total = []
+        for i in range(0, 11):
+            total.append(i)
+        sizes_available = [1000, 1200, 1300, 1400, 1600, 1700, 1800, 1800, 2000, 2500, 3000]
+        segments = [70,80,88,104,108,112,120,120,128,140,160]
+        dimension = ['24*7.4*15', '24*8.4*15','24*8.5*15/20','24*9.0*15/20','24*9.8*15/20'
+            ,'24*9.8*15'
+            ,'24*9.8*15'
+            ,'24*10.20*15/20'
+            ,'24*10.5*15'
+            ,'24*11.5*15'
+            ,'24*12.5*15']
         for i in range(0, 5):
             if (path == products_list[i]):
                 product_detail = models.Product.objects.get(id=i+1)
                 context = {
                     'product_detail':product_detail,
+                    'sizes_available':sizes_available,
+                    'segments':segments,
+                    'dimension':dimension,
+                    'total':total,
                 }
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):
