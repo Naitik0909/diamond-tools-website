@@ -38,11 +38,13 @@
 </div>
 </div>
 </div>
-<section class="my-table">
+
+<!-- --------SECTION FOR GANGSAW SEGMENT TABLE-------- -->
+<section id="table-for-gangsaw" class="my-table">
   <div class="container">
 
   <div class="row">
-					<div class="col-md-4">
+					<div class="col-md-6">
             <div class="progress-table-wrap">
 					<div class="progress-table">
 						<div class="table-head">
@@ -119,7 +121,67 @@
 					</div>
 				</div>
 					</div>
-					<div class="col-md-7 mt-sm-20">
+					<div class="col-md-5 mt-sm-20">
+            <blockquote class="generic-blockquote">
+              {{ product_detail.description }}
+            </blockquote>
+					</div>
+				</div>
+
+      </div>
+</section>
+<!-- -------GANGSAW SEGMENT TABLE ENDS--------- -->
+<section  id="table-for-multiblade" class="my-table">
+  <div class="container">
+
+  <div class="row">
+					<div class="col-md-4">
+            <div class="progress-table-wrap">
+					<div class="progress-table">
+						<div style="padding-left: 8%;" class="table-head">
+							<div id="multi-table-heading" class="serial">Dimension (in mm)</div>
+						</div>
+						<div style="padding-left: 11%;" class="table-row">
+            <div class="serial">{{ multi_dimension.1 }}</div>
+            </div>
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.2 }}</div>
+            </div>
+
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.3 }}</div>
+            </div>
+
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.4 }}</div>
+            </div>
+
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.5 }}</div>
+            </div>
+
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.6 }}</div>
+            </div>
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.7 }}</div>
+            </div>
+
+            <div style="padding-left: 11%;" class="table-row">
+
+            <div class="serial">{{ multi_dimension.8 }}</div>
+            </div>
+
+					</div>
+				</div>
+					</div>
+					<div class="col-md-5 mt-sm-20">
             <blockquote class="generic-blockquote">
               {{ product_detail.description }}
             </blockquote>

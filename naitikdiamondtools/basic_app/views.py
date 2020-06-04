@@ -56,6 +56,16 @@ class ProductDetail(View):
             ,'24*10.5*15'
             ,'24*11.5*15'
             ,'24*12.5*15']
+        multi_dimension = [
+                    '23*6.5*15/20',
+                    '23*7.4*15/20',
+                    '23*8.5*15/20',
+                    '23*9.0*15/20',
+                    '24*6.5*15/20',
+                    '24*7.4*15/20',
+                    '24*8.5*15/20',
+                    '24*9.0*15/20'
+                    ]
         for i in range(0, 5):
             if (path == products_list[i]):
                 product_detail = models.Product.objects.get(id=i+1)
@@ -65,6 +75,7 @@ class ProductDetail(View):
                     'segments':segments,
                     'dimension':dimension,
                     'total':total,
+                    'multi_dimension':multi_dimension,
                 }
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):

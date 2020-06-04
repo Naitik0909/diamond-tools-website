@@ -13,3 +13,24 @@
 .progress-table-wrap{
   overflow-x: hidden;
 }
+
+.table-head {
+  background-color: antiquewhite;
+}
+
+#table-for-gangsaw{
+  display: none;
+}
+
+/* CSS FOR MULTIBLADE PAGE */
+#multi-table-heading{
+  width: 30%;
+}
+
+.multi-table-row{
+  padding-left: 11%;
+}
+
+#table-for-multiblade{
+  display: none;
+}
