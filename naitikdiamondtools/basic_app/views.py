@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, View
 from . import models
+from django.contrib import messages
 # Create your views here.
 
 def formSubmitted(self, request, *args, **kwargs):
@@ -80,4 +81,5 @@ class ProductDetail(View):
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):
         formSubmitted(self, request, *args, **kwargs)
+        messages.success(request, "Your query has been sent to us successfully! We will revert back to you.")
         return redirect("index")

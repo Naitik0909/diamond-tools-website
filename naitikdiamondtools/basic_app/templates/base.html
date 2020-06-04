@@ -12,7 +12,7 @@
     <!-- NAVBAR CSS -->
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <!-- <link rel="stylesheet" href="assets/css/-Fixed-Navbar-start-with-transparency-background-BS4-.css"> -->
-        <link rel="stylesheet" href="static/assets/css/style.css">
+        <link rel="stylesheet" href="../static/assets/css/style.css">
 
       <!-- CSS FROM TEMPLATE -->
       <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
@@ -69,18 +69,18 @@
                             <div class="main-menu f-right d-none d-lg-block">
                                 <nav>
                                     <ul id="navigation">
-                                        <li><a style="font-size:20px;" href="{% url 'index' %}">Home</a></li>
-                                        <li class=""><a style="font-size:20px;" href="#">Our Products</a>
+                                        <li><a class="nav-button" style="font-size:20px;" href="{% url 'index' %}">Home</a></li>
+                                        <li class=""><a class="nav-button" style="font-size:20px;" href="#">Our Products</a>
                                             <ul class="submenu">
-                                                <li><a href="/2"> Gangsaw Segment</a></li>
-                                                <li><a href="/1"> Multi Blade Segment</a></li>
-                                                <li><a href="/3"> Wiresaw Pearls Chain</a></li>
-                                                <li><a href="/4"> Circular Saw</a></li>
-                                                <li><a href="/5"> Calibration Tools</a></li>
+                                                <li><a class="nav-button" href="/2"> Gangsaw Segment</a></li>
+                                                <li><a class="nav-button" href="/1"> Multi Blade Segment</a></li>
+                                                <li><a class="nav-button" href="/3"> Wiresaw Pearls Chain</a></li>
+                                                <li><a class="nav-button" href="/4"> Circular Saw</a></li>
+                                                <li><a class="nav-button" href="/5"> Calibration Tools</a></li>
                                             </ul>
                                         </li>
 
-                                        <li><a style="font-size:20px;" href="{% url 'contact-us' %}">Contact Us</a></li>
+                                        <li><a class="nav-button" style="font-size:20px;" href="{% url 'contact-us' %}">Contact Us</a></li>
                                     </ul>
                                 </nav>
                             </div>
@@ -150,6 +150,9 @@
               <script src="{% static 'assets/js/main.js' %}"></script>
               <script src="{% static 'assets/js/detail-visible.js' %}"></script>
               <script src="{% static 'assets/js/form-validation.js' %}"></script>
+              <script src="{% static 'assets/js/general.js' %}"></script>
+
+              </script>
               <!-- subscribe part here -->
  <section class="subscribe_part" style="padding-top: 150px;">
    <div class="container">
