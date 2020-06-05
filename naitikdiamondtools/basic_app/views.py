@@ -19,14 +19,14 @@ def formSubmitted(self, request, *args, **kwargs):
             email = email,
             query = query
             )
-            sendMail(email, query)
+            #sendMail(email, query)
         else:
             phone = form.get('email-phone')
             new_query = models.QueryBox.objects.create(
             phone = phone,
             query = query
             )
-            sendMail(phone, query)
+            #sendMail(phone, query)
         new_query.save()
 
 def sendMail(user_data, user_query):
@@ -97,7 +97,6 @@ class ProductDetail(View):
                     'dimension':dimension,
                     'total':total,
                     'multi_dimension':multi_dimension,
-                    'env':os.environ.get('SENDGRID_API_KEY')
                 }
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):
