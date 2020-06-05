@@ -3,6 +3,8 @@ from django.urls import reverse_lazy
 from django.views.generic import TemplateView, ListView, DetailView, View
 from . import models
 from django.contrib import messages
+from django.core.mail import send_mail
+import os
 # Create your views here.
 
 def formSubmitted(self, request, *args, **kwargs):
@@ -17,13 +19,32 @@ def formSubmitted(self, request, *args, **kwargs):
             email = email,
             query = query
             )
+            sendMail(email, query)
         else:
             phone = form.get('email-phone')
             new_query = models.QueryBox.objects.create(
             phone = phone,
             query = query
             )
+            sendMail(phone, query)
         new_query.save()
+        return True
+
+def sendMail(user_data, user_query):
+    self_message = '''Just received a new query from a customer.
+
+            Customer credentials:
+            '''+str(user_data)+'''
+
+            Customer query:
+            '''+user_query
+
+    send_mail(
+    'New enquiry received for Naitik Diamond Tools!',
+    self_message,
+    os.environ['SEND_FROM_EMAIL'],
+    ['parmarnaitik0909@gmail.com', 'naitikdiamondtools@yahoo.com']
+    )
 
 
 class BaseClass(View):
@@ -80,6 +101,6 @@ class ProductDetail(View):
                 }
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):
-        formSubmitted(self, request, *args, **kwargs)
-        messages.success(request, "Your query has been sent to us successfully! We will revert back to you.")
-        return redirect("index")
+        if (formSubmitted(self, request, *args, **kwargs)):
+            messages.success(request, "Your query has been sent to us successfully! We will revert back to you soon.")
+            return redirect("index")

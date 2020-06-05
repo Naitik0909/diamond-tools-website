@@ -18,8 +18,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 TEMPLATE_DIR = os.path.join(BASE_DIR, "templates")
 STATIC_DIR = os.path.join(BASE_DIR, "static")
 
+os.environ['SEND_FROM_EMAIL'] = 'parmarnaitik0909@gmail.com'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
+
+# SMTP EMAIL SETTINGS
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = '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'
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
+
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'ta(&zkvto36ozteq57#2ht968su0cu#_p7+s^=*!vus4amg0^a'
