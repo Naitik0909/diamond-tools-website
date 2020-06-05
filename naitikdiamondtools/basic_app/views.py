@@ -28,7 +28,6 @@ def formSubmitted(self, request, *args, **kwargs):
             )
             sendMail(phone, query)
         new_query.save()
-        return True
 
 def sendMail(user_data, user_query):
     self_message = '''Just received a new query from a customer.
@@ -98,9 +97,10 @@ class ProductDetail(View):
                     'dimension':dimension,
                     'total':total,
                     'multi_dimension':multi_dimension,
+                    'env':os.environ.get('SENDGRID_API_KEY')
                 }
                 return render(request, "products_detail.html", context=context)
     def post(self, request, *args, **kwargs):
-        if (formSubmitted(self, request, *args, **kwargs)):
-            messages.success(request, "Your query has been sent to us successfully! We will revert back to you soon.")
-            return redirect("index")
+        formSubmitted(self, request, *args, **kwargs)
+        messages.success(request, "Your query has been sent to us successfully! We will revert back to you soon.")
+        return redirect("index")
