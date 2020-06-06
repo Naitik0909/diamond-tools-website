@@ -24,7 +24,12 @@ os.environ['SEND_FROM_EMAIL'] = 'parmarnaitik0909@gmail.com'
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SMTP EMAIL SETTINGS
-
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'apikey'
+EMAIL_HOST_PASSWORD = os.environ['SENDGRID_API_KEY']
+EMAIL_USE_TLS = True
+EMAIL_USE_SSL = False
 
 
 # SECURITY WARNING: keep the secret key used in production secret!
@@ -79,16 +84,28 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'naitikdiamondtools.wsgi.application'
 
+import pymysql
+pymysql.version_info = (1, 4, 6, 'final', 0)  # change mysqlclient version
+pymysql.install_as_MySQLdb()
 
-# Database
-# https://docs.djangoproject.com/en/2.2/ref/settings/#databases
-
+# [START db_setup]
+    # Running locally so connect to either a local MySQL instance or connect to
+    # Cloud SQL via the proxy. To start the proxy via command line:
+    #
+    #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
+    #
+    # See https://cloud.google.com/sql/docs/mysql-connect-proxy
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'default': {
+            'ENGINE': 'django.db.backends.mysql',
+            'HOST': 'www.naitikdiamondtools.in',
+            'PORT': '3306',
+            'NAME': 'ndt_db',
+            'USER': os.environ['MYSQL_USER'],
+            'PASSWORD': os.environ['MYSQL_PASSWORD'],
+        }
     }
-}
+# # [END db_setup]
 
 
 # Password validation
