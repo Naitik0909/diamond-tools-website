@@ -27,7 +27,7 @@ os.environ['SEND_FROM_EMAIL'] = 'parmarnaitik0909@gmail.com'
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_HOST_USER = 'apikey'
-EMAIL_HOST_PASSWORD = os.environ['SENDGRID_API_KEY']
+EMAIL_HOST_PASSWORD = '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'
 EMAIL_USE_TLS = True
 EMAIL_USE_SSL = False
 
@@ -101,8 +101,8 @@ DATABASES = {
             'HOST': 'www.naitikdiamondtools.in',
             'PORT': '3306',
             'NAME': 'ndt_db',
-            'USER': os.environ['MYSQL_USER'],
-            'PASSWORD': os.environ['MYSQL_PASSWORD'],
+            'USER': 'naitik',
+            'PASSWORD': 'luvufmly',
         }
     }
 # # [END db_setup]
