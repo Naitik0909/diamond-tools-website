@@ -45,3 +45,10 @@
     width: 100px;
   }
 }
+
+@media (max-width: 776px) {
+  #enquire-button{
+    color: white;
+    background-color: #472743;
+  }
+}
