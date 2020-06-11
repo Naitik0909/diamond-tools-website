@@ -18,3 +18,7 @@ if (main_path == "2"){
 else if (main_path == "1"){
   $("#table-for-multiblade").css("display", "inherit");
 }
+
+else if(main_path == "3" || main_path == "4" || main_path == "5"){
+  $('.others-description').css("display", "inherit");
+}

@@ -34,3 +34,12 @@
 #table-for-multiblade{
   display: none;
 }
+
+blockquote{
+  line-height: 35px;
+}
+
+.others-description{
+  display: none;
+  margin-top: 50px;
+}
