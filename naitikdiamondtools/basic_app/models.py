@@ -13,5 +13,5 @@ class Product(models.Model):
 
 class QueryBox(models.Model):
     email = models.EmailField(blank=True, null=True)
-    phone = models.PositiveIntegerField(blank=True, null=True)
+    phone = models.BigIntegerField(blank=True, null=True)
     query = models.CharField(max_length=10000)

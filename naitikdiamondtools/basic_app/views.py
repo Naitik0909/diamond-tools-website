@@ -53,11 +53,17 @@ class BaseClass(View):
         return render(request, "homepage.html", context=context)
     def post(self, request, *args, **kwargs):
         formSubmitted(self, request, *args, **kwargs)
+        messages.success(request, "Your query has been sent to us successfully! We will revert back to you soon.")
         return redirect("index") # also return a message that message has been sent
 
 class AboutUs(View):
     def get(self, request, *args, **kwargs):
         return render(request, 'aboutus.html')
+
+    def post(self, request, *args, **kwargs):
+        formSubmitted(self, request, *args, **kwargs)
+        messages.success(request, "Your query has been sent to us successfully! We will revert back to you soon.")
+        return redirect("index")
 
 class ProductDetail(View):
     def get(self, request, *args, **kwargs):
