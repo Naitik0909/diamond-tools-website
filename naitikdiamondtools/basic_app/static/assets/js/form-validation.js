@@ -3,9 +3,11 @@ function checkQuery(){
   if (query.length >= 10000){
 
     alert('Please enter a query in less than 10000 letters.');
+    return false;
   }
   else {
     document.getElementById('new-form').submit();
+    return true;
   }
 }
 
@@ -30,6 +32,7 @@ function validateForm(){
     }
     else{
       alert("Please enter a valid Email address/Phone number");
+      return false;
     }
   }
 

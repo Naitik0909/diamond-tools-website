@@ -176,7 +176,7 @@
            <p>If you are interested in any of our products or just feel like
              asking any query to us, feel free to contact us.</p>
 
-             <form id="new-form" name="query-form" class="" method="POST">
+             <form id="new-form" name="query-form" class="" method="POST" onsubmit="return validateForm()">
                {% csrf_token %}
              <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
              <input class="form-control valid" name="email-phone" id="email" type="email" onfocus="this.placeholder = ''"
@@ -184,7 +184,7 @@
              <div class="subscribe_form">
                <textarea required class="form-control w-100" name="actual-query" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message/Query'" placeholder=" Enter Message/Query"></textarea>
                <br><br>
-               <a type="submit" style="color: white;" class="btn" onclick="validateForm()">Submit your Query</a><br><br>
+               <a type="submit" style="color: white;" class="btn">Submit your Query</a><br><br>
              </div>
 
            </form>
