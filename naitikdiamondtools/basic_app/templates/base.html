@@ -179,12 +179,12 @@
              <form id="new-form" name="query-form" class="" method="POST" onsubmit="return validateForm()">
                {% csrf_token %}
              <p id="label"for="">Enter either your Email Id or your Phone number so that we can get back to you:</p>
-             <input class="form-control valid" name="email-phone" id="email" type="email" onfocus="this.placeholder = ''"
+             <input class="form-control valid" name="email-phone" id="email" onfocus="this.placeholder = ''"
              onblur="this.placeholder = 'Enter email address or Phone number'" placeholder="Enter email address or Phone number">
              <div class="subscribe_form">
                <textarea required class="form-control w-100" name="actual-query" id="message" cols="30" rows="9" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message/Query'" placeholder=" Enter Message/Query"></textarea>
                <br><br>
-               <a type="submit" style="color: white;" class="btn">Submit your Query</a><br><br>
+               <button type="submit" style="color: white;" class="btn">Submit your Query</button><br><br>
              </div>
 
            </form>
