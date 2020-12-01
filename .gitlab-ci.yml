@@ -1,0 +1,13 @@
+production_job:
+  stage: deploy
+  only:
+    - master # Run this job only on changes for the master branch
+
+  before_script:
+    # Generate ssh key
+    - mkdir -p ~/.sh
+    - echo -e "$PROD_SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+    - chmod 600 ~/.ssh/id_rsa
+
+  script:
+    - bash .deploy.sh
