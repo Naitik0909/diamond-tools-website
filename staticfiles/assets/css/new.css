@@ -1,0 +1,54 @@
+
+.mobile-map{
+  display: none;
+}
+#nav-logo{
+  font-size: 30px;
+  margin-left: 50px;
+}
+
+#logo-main-img{
+  width: 150px;
+}
+
+
+@media (max-width: 776px) {
+  #nav-logo {
+    display: none;
+     }
+}
+
+@media (max-width: 776px) {
+  .product_list {
+    margin-top: 30%;
+     }
+}
+
+.img-fluid{
+  border: solid black 1px;
+}
+
+@media (max-width: 776px) {
+  .pc-map {
+    display: none;
+     }
+}
+
+@media (max-width: 776px) {
+  .mobile-map{
+    display: contents;
+  }
+}
+
+@media (max-width: 776px) {
+  #logo-main-img{
+    width: 100px;
+  }
+}
+
+@media (max-width: 776px) {
+  #enquire-button{
+    color: white;
+    background-color: #472743;
+  }
+}

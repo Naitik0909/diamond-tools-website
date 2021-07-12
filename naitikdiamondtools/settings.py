@@ -38,7 +38,7 @@ SECRET_KEY = 'ta(&zkvto36ozteq57#2ht968su0cu#_p7+s^=*!vus4amg0^a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = socket.gethostname() == 'LAPTOP-KSPUN68R'
 
-ALLOWED_HOSTS = ['ec2-13-234-30-132.ap-south-1.compute.amazonaws.com', 'www.naitikdiamondtools.in']
+ALLOWED_HOSTS = ['ec2-13-234-30-132.ap-south-1.compute.amazonaws.com', 'www.naitikdiamondtools.in', 'naitik-diamond-tools.herokuapp.com']
 
 if DEBUG:
     ALLOWED_HOSTS.append('127.0.0.1')
@@ -147,6 +147,7 @@ USE_TZ = True
 MEDIA_URL = '/media/'
 STATIC_URL = '/static/'
 MEDIA_ROOT = 'media'
+STATIC_ROOT = 'staticfiles'
 STATICFILES_DIRS = [
     STATIC_DIR
 ]
