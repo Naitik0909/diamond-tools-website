@@ -95,17 +95,26 @@ pymysql.install_as_MySQLdb()
     #     $ cloud_sql_proxy -instances=[INSTANCE_CONNECTION_NAME]=tcp:3306
     #
     # See https://cloud.google.com/sql/docs/mysql-connect-proxy
-DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'HOST': 'www.naitikdiamondtools.in',
-            'PORT': '3306',
-            'NAME': 'ndt_db',
-            'USER': 'naitik',
-            'PASSWORD': 'luvufmly',
-        }
-    }
+# DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.mysql',
+#             'HOST': 'www.naitikdiamondtools.in',
+#             'PORT': '3306',
+#             'NAME': 'ndt_db',
+#             'USER': 'naitik',
+#             'PASSWORD': 'luvufmly',
+#         }
+#     }
 # # [END db_setup]
+
+DATABASES = {
+    'default':{
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': str(os.path.join(BASE_DIR, "db.sqlite3"))
+    }
+}
+
+
 
 
 # Password validation
