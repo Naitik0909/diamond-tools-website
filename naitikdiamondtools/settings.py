@@ -55,6 +55,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -84,9 +85,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'naitikdiamondtools.wsgi.application'
 
-import pymysql
-pymysql.version_info = (1, 4, 6, 'final', 0)  # change mysqlclient version
-pymysql.install_as_MySQLdb()
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+# import pymysql
+# pymysql.version_info = (1, 4, 6, 'final', 0)  # change mysqlclient version
+# pymysql.install_as_MySQLdb()
 
 # [START db_setup]
     # Running locally so connect to either a local MySQL instance or connect to
